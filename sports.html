@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chzzk Clone - 스포츠</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        // 이 곳은 HTML 파일이므로, script.js 파일이 로드된다고 가정합니다.
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="header-section header-left">
+            <button class="icon-btn" id="menu-toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="logo">
+                <a href="index.html">CHZZK</a>
+            </h1>
+            <nav class="main-nav">
+                <a href="esports.html" class="nav-text" data-page="esports">e스포츠</a> 
+                <a href="sports.html" class="nav-text active" data-page="sports">스포츠</a>
+                <a href="enter.html" class="nav-text" data-page="enter">엔터</a>
+            </nav>
+        </div>
+
+        <div class="header-section header-center">
+            <div class="search-bar-container">
+                <input type="text" placeholder="검색어를 입력해 주세요">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-section header-right">
+            <button class="login-btn">
+                로그인
+            </button>
+        </div>
+    </div>
+
+    <div id="wrapper" class="collapsed"> 
+        <div id="main-container">
+            <aside id="sidebar">
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html">
+                                <span class="icon-only"><i class="fas fa-home"></i></span>
+                                <span class="nav-label">홈</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon-only"><i class="fas fa-video"></i></span>
+                                <span class="nav-label">라이브</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon-only"><i class="fas fa-star"></i></span>
+                                <span class="nav-label">MY</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="divider"></div>
+
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">인기 카테고리</h2>
+                    <ul class="nav-link-list" id="category-list">
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-gamepad"></i></span><span class="nav-label">게임</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-comments"></i></span><span class="nav-label">Just Chatting</span></a></li>
+                        <li class="link-item"><a href="esports.html"><span class="icon-only"><i class="fas fa-trophy"></i></span><span class="nav-label">e스포츠</span></a></li>
+                        <li class="link-item active"><a href="sports.html"><span class="icon-only"><i class="fas fa-volleyball-ball"></i></span><span class="nav-label">스포츠</span></a></li>
+                        <li class="link-item"><a href="enter.html"><span class="icon-only"><i class="fas fa-film"></i></span><span class="nav-label">엔터</span></a></li>
+                        
+                    </ul>
+                </div>
+                <div class="divider"></div>
+                
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">서비스 바로가기</h2>
+                    <ul class="nav-link-list" id="service-list">
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-coins"></i></span><span class="nav-label">충전/결제</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-calendar-alt"></i></span><span class="nav-label">이벤트</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-user-circle"></i></span><span class="nav-label">MY 페이지</span></a></li>
+                    </ul>
+                </div>
+                <div class="divider"></div>
+
+                <div class="sidebar-section" id="followed-channels">
+                    <h2 class="nav-label-title">팔로우 채널</h2>
+                    <p class="nav-label-title">로그인 후 이용 가능합니다.</p>
+                </div>
+                
+                <div class="divider"></div>
+
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">추가 링크</h2>
+                    <ul class="nav-link-list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                
+            </aside>
+
+            <main id="content">
+                <section class="top-banner-section" style="margin-bottom: 20px;">
+                    <div class="rolling-banner-container">
+                        <div class="rolling-banner">
+                            <div class="banner-item">⚽ **축구 국가대표 경기** 독점 생중계! 놓치지 마세요!</div>
+                            <div class="banner-item">⚾ **KBO리그 하이라이트** 매일 업데이트!</div>
+                            <div class="banner-item">🏀 **NBA 파이널** 독점 생중계! 지금 바로 시청하세요!</div>
+                            <div class="banner-item">🏆 인기 스포츠 중계권 확보 기념 **치킨 쿠폰 이벤트** 진행 중!</div>
+                            
+                            <div class="banner-item">⚽ **축구 국가대표 경기** 독점 생중계! 놓치지 마세요!</div>
+                            <div class="banner-item">⚾ **KBO리그 하이라이트** 매일 업데이트!</div>
+                            <div class="banner-item">🏀 **NBA 파이널** 독점 생중계! 지금 바로 시청하세요!</div>
+                            <div class="banner-item">🏆 인기 스포츠 중계권 확보 기념 **치킨 쿠폰 이벤트** 진행 중!</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="main-video-section" style="margin-bottom: 40px; position: relative;">
+                    <h2>오늘의 빅 매치 하이라이트: 대한민국 vs 일본 (축구)</h2>
+                    <video id="main-player" autoplay loop muted style="width: 100%; max-height: 500px; border-radius: 8px; object-fit: cover;">
+                        <source src="source/sports_highlight.mp4" type="video/mp4">
+                        브라우저가 video 태그를 지원하지 않습니다.
+                    </video>
+
+                    <button id="volume-toggle-btn" 
+                        style="position: absolute; bottom: 50px; left: 15px; 
+                                background-color: rgba(0, 0, 0, 0.6); color: white; 
+                                border: none; border-radius: 50%; padding: 10px; 
+                                cursor: pointer; font-size: 18px; z-index: 50;">
+                        <i class="fas fa-volume-mute"></i> 
+                    </button>
+                    
+                    <div class="video-info-overlay">
+                        <div class="overlay-text-content">
+                            <p class="info-title">손흥민 결승골! 아시아 챔피언 등극!</p>
+                            <p class="info-details">최고 시청률 기록! 다시 보는 명장면</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="main-sports-live" style="margin-bottom: 40px;">
+                    <h2>주요 경기 라이브 🔴</h2>
+                    <div class="card-grid">
+                        <div class="live-card">KBO: 기아 vs 롯데 (현재 7회)</div>
+                        <div class="live-card">MLB: 다저스 vs 양키스 (8회초)</div>
+                        <div class="live-card">V리그: 현대 vs 대한항공 (3세트)</div>
+                        <div class="live-card">UFC 299 메인 이벤트 (대기중)</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>인기 종목별 클립/VOD</h2>
+                    <div class="card-grid">
+                        <div class="vod-card">축구 하이라이트</div>
+                        <div class="vod-card">야구 명장면</div>
+                        <div class="vod-card">농구 역대급 덩크</div>
+                        <div class="vod-card">골프 레슨</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

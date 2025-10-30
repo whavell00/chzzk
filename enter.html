@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chzzk Clone - 엔터</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        // 이 곳은 HTML 파일이므로, script.js 파일이 로드된다고 가정합니다.
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="header-section header-left">
+            <button class="icon-btn" id="menu-toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="logo">
+                <a href="index.html">CHZZK</a>
+            </h1>
+            <nav class="main-nav">
+                <!-- <a href="index.html" class="nav-text" data-page="index">게임</a> -->
+                <a href="esports.html" class="nav-text" data-page="esports">e스포츠</a>
+                <a href="sports.html" class="nav-text" data-page="sports">스포츠</a>
+                <a href="enter.html" class="nav-text active" data-page="enter">엔터</a>
+            </nav>
+        </div>
+
+        <div class="header-section header-center">
+            <div class="search-bar-container">
+                <input type="text" placeholder="검색어를 입력해 주세요">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-section header-right">
+            <button class="login-btn">
+                로그인
+            </button>
+        </div>
+    </div>
+
+    <div id="wrapper" class="collapsed"> 
+        <div id="main-container">
+            <aside id="sidebar">
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html">
+                                <span class="icon-only"><i class="fas fa-home"></i></span>
+                                <span class="nav-label">홈</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon-only"><i class="fas fa-video"></i></span>
+                                <span class="nav-label">라이브</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon-only"><i class="fas fa-star"></i></span>
+                                <span class="nav-label">MY</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="divider"></div>
+
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">인기 카테고리</h2>
+                    <ul class="nav-link-list" id="category-list">
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-gamepad"></i></span><span class="nav-label">게임</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-comments"></i></span><span class="nav-label">Just Chatting</span></a></li>
+                        <li class="link-item"><a href="esports.html"><span class="icon-only"><i class="fas fa-trophy"></i></span><span class="nav-label">e스포츠</span></a></li>
+                        <li class="link-item"><a href="sports.html"><span class="icon-only"><i class="fas fa-volleyball-ball"></i></span><span class="nav-label">스포츠</span></a></li>
+                        <li class="link-item active"><a href="enter.html"><span class="icon-only"><i class="fas fa-film"></i></span><span class="nav-label">엔터</span></a></li>
+                    </ul>
+                </div>
+                <div class="divider"></div>
+                
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">서비스 바로가기</h2>
+                    <ul class="nav-link-list" id="service-list">
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-coins"></i></span><span class="nav-label">충전/결제</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-calendar-alt"></i></span><span class="nav-label">이벤트</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-user-circle"></i></span><span class="nav-label">MY 페이지</span></a></li>
+                    </ul>
+                </div>
+                <div class="divider"></div>
+
+                <div class="sidebar-section" id="followed-channels">
+                    <h2 class="nav-label-title">팔로우 채널</h2>
+                    <p class="nav-label-title">로그인 후 이용 가능합니다.</p>
+                </div>
+                
+                <div class="divider"></div>
+
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">추가 링크</h2>
+                    <ul class="nav-link-list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                
+            </aside>
+
+            <main id="content">
+                <section class="main-video-section" style="margin-bottom: 40px; position: relative;">
+                    <h2>무한도전 레전드 하이라이트</h2>
+                    <video id="main-player" autoplay loop muted style="width: 100%; max-height: 500px; border-radius: 8px; object-fit: cover;">
+                        <source src="source/mudo_highlight.mp4" type="video/mp4">
+                        브라우저가 video 태그를 지원하지 않습니다.
+                    </video>
+                    
+                    <div class="video-info-overlay">
+                        <div class="overlay-text-content"> <p class="info-title" style="font-size: 2.5em; font-weight: 900; margin: 0 0 10px; line-height: 1.2;">
+                                무한도전 레전드 하이라이트
+                            </p>
+                            
+                            <p class="info-details" style="font-size: 1.2em; font-weight: 400; margin: 0; max-width: 80%;">
+                                역사상 최대 리얼 버라이어티 무한도전을 무한 라이브로 다시 시청하세요!
+                            </p>
+                        </div>
+                    </div>
+
+                    <button id="volume-toggle-btn" 
+                        style="position: absolute; bottom: 50px; left: 15px; 
+                                background-color: rgba(0, 0, 0, 0.6); color: white; 
+                                border: none; border-radius: 50%; padding: 10px; 
+                                cursor: pointer; font-size: 18px; z-index: 50;">
+                        <i class="fas fa-volume-mute"></i> 
+                    </button>
+                </section>
+
+                <section>
+                    <h2>인기 엔터 라이브</h2>
+                    <div class="card-grid" id="live-list">
+                        <div class="live-card">인기 라이브 1</div>
+                        <div class="live-card">인기 라이브 2</div>
+                        <div class="live-card">인기 라이브 3</div>
+                        <div class="live-card">인기 라이브 4</div>
+                    </div>
+                </section>
+
+                <section style="margin-top: 40px;">
+                    <h2>최신 엔터 VOD</h2>
+                    <div class="card-grid">
+                        <div class="vod-card">최신 VOD 1</div>
+                        <div class="vod-card">최신 VOD 2</div>
+                        <div class="vod-card">최신 VOD 3</div>
+                        <div class="vod-card">최신 VOD 4</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

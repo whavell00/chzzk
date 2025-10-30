@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 | Chzzk Clone</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 임시 로그인 페이지 스타일링 (style.css에 추가하는 것을 권장) */
+        body {
+            background-color: #0d0d0d; /* 배경색 통일 */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 50px; /* 헤더 영역을 고려하여 약간의 여백 추가 */
+        }
+
+        #login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00ff00; /* CHZZK 메인 색상 */
+            margin-bottom: 30px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            box-sizing: border-box;
+            outline: none;
+        }
+        
+        .login-form input[type="text"]::placeholder,
+        .login-form input[type="password"]::placeholder {
+            color: #888;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .naver-login-btn {
+            background-color: #03c75a; /* 네이버 색상 */
+            color: white;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .naver-login-btn i {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .svg-inline--fa {
+            margin-right: 10px;
+        }
+
+        .naver-login-btn:hover {
+            background-color: #02a84d;
+        }
+        
+        .login-btn-submit {
+            background-color: #00ff00; /* CHZZK 메인 색상 */
+            color: black;
+            font-weight: 700;
+        }
+
+        .login-btn-submit:hover {
+            background-color: #00e600;
+        }
+
+        .separator {
+            margin: 20px 0;
+            border-bottom: 1px solid #333;
+            position: relative;
+        }
+        
+        .separator::before {
+            content: "또는";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1a1a1a;
+            padding: 0 10px;
+            color: #888;
+        }
+
+        .link-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .link-group a {
+            color: #aaaaaa;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: color 0.2s;
+        }
+
+        .link-group a:hover {
+            color: #00ff00;
+        }
+
+        /* ✨ 새로 추가된 스타일: 메인 페이지 돌아가기 버튼 */
+        .back-to-home-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 30px; /* 위쪽 링크 그룹과 분리 */
+            border: 1px solid #00ff00;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #00ff00;
+            background-color: transparent;
+            font-weight: 700;
+            transition: all 0.2s;
+            font-size: 16px;
+        }
+
+        .back-to-home-btn:hover {
+            background-color: #00ff00;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <!-- 로고를 누르면 메인으로 돌아갑니다 (기존 기능) -->
+        <a href="index.html" class="login-logo">CHZZK</a>
+        
+        <form class="login-form">
+            <button type="button" class="naver-login-btn">
+                <i class="fas fa-sign-in-alt"></i> 네이버 ID로 로그인
+            </button>
+
+            <div class="separator"></div>
+
+            <input type="text" placeholder="아이디를 입력해 주세요" required>
+            <input type="password" placeholder="비밀번호를 입력해 주세요" required>
+
+            <button type="submit" class="login-btn-submit">
+                로그인
+            </button>
+        </form>
+
+        <div class="link-group">
+            <a href="#">회원가입</a>
+            <div>
+                <a href="#">아이디 찾기</a>
+                <span> | </span>
+                <a href="#">비밀번호 찾기</a>
+            </div>
+        </div>
+        
+        <!-- ✨ 새로 추가된 부분: 메인 페이지로 이동하는 버튼 -->
+        <a href="index.html" class="back-to-home-btn">
+            메인 페이지로 돌아가기
+        </a>
+    </div>
+    
+    </body>
+</html>

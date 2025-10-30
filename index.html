@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chzzk Clone</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        // 이 곳은 HTML 파일이므로, script.js 파일이 로드된다고 가정합니다.
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="header-section header-left">
+            <button class="icon-btn" id="menu-toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="logo">
+                <a href="index.html">CHZZK</a>
+            </h1>
+            <nav class="main-nav">
+                <a href="esports.html" class="nav-text active" data-page="esports">e스포츠</a> 
+                <a href="sports.html" class="nav-text" data-page="sports">스포츠</a>
+                <a href="enter.html" class="nav-text" data-page="enter">엔터</a>
+            </nav>
+        </div>
+
+        <div class="header-section header-center">
+            <div class="search-bar-container">
+                <input type="text" placeholder="검색어를 입력해 주세요">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-section header-right">
+            <a href="login.html" style="text-decoration: none;">
+                <button class="login-btn">
+                    로그인
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div id="wrapper" class="collapsed"> 
+        <div id="main-container">
+            <aside id="sidebar">
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <a href="#">
+                                <span class="icon-only"><i class="fas fa-home"></i></span>
+                                <span class="nav-label">홈</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon-only"><i class="fas fa-video"></i></span>
+                                <span class="nav-label">라이브</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="icon-only"><i class="fas fa-star"></i></span>
+                                <span class="nav-label">MY</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="divider"></div>
+
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">인기 카테고리</h2>
+                    <ul class="nav-link-list" id="category-list">
+                        <!-- 게임과 Just Chatting은 임시 링크 유지 -->
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-gamepad"></i></span><span class="nav-label">게임</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-comments"></i></span><span class="nav-label">Just Chatting</span></a></li>
+                        
+                        <!-- e스포츠 항목 링크 수정 -->
+                        <li class="link-item"><a href="esports.html"><span class="icon-only"><i class="fas fa-trophy"></i></span><span class="nav-label">e스포츠</span></a></li>
+                        
+                        <!-- 스포츠 항목 링크 수정 -->
+                        <li class="link-item"><a href="sports.html"><span class="icon-only"><i class="fas fa-volleyball-ball"></i></span><span class="nav-label">스포츠</span></a></li>
+                        
+                        <!-- 엔터 항목 추가 및 링크 설정 -->
+                        <li class="link-item"><a href="enter.html"><span class="icon-only"><i class="fas fa-film"></i></span><span class="nav-label">엔터</span></a></li>
+                    </ul>
+                </div>
+                <div class="divider"></div>
+
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">서비스 바로가기</h2>
+                    <ul class="nav-link-list" id="service-list">
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-coins"></i></span><span class="nav-label">충전/결제</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-calendar-alt"></i></span><span class="nav-label">이벤트</span></a></li>
+                        <li class="link-item"><a href="#"><span class="icon-only"><i class="fas fa-user-circle"></i></span><span class="nav-label">MY 페이지</span></a></li>
+                    </ul>
+                </div>
+                <div class="divider"></div>
+
+                <div class="sidebar-section" id="followed-channels">
+                    <h2 class="nav-label-title">팔로우 채널</h2>
+                    <p class="nav-label-title">로그인 후 이용 가능합니다.</p>
+                </div>
+                
+                <div class="divider"></div>
+
+                <div class="sidebar-section">
+                    <h2 class="nav-label-title">추가 링크</h2>
+                    <ul class="nav-link-list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                
+            </aside>
+
+            <main id="content">
+                <section class="top-banner-section" style="margin-bottom: 20px;">
+                    <div class="rolling-banner-container">
+                        <div class="rolling-banner">
+                            <div class="banner-item">🎉 **CHZZK SUMMER FESTA!** 역대급 보상과 쿠폰이 쏟아집니다!</div>
+                            <div class="banner-item">📢 신규 유저 **웰컴 기프트 증정!** 지금 바로 로그인하세요. (⭐ 한정 수량)</div>
+                            <div class="banner-item">🔥 **LCK 플레이오프** 독점 생중계! 절대 놓치지 마세요. #e스포츠</div>
+                            <div class="banner-item">💰 치지직 충전 시 **보너스 포인트 10%** 추가 지급 이벤트 진행 중!</div>
+                            
+                            <div class="banner-item">🎉 **CHZZK SUMMER FESTA!** 역대급 보상과 쿠폰이 쏟아집니다!</div>
+                            <div class="banner-item">📢 신규 유저 **웰컴 기프트 증정!** 지금 바로 로그인하세요. (⭐ 한정 수량)</div>
+                            <div class="banner-item">🔥 **LCK 플레이오프** 독점 생중계! 절대 놓치지 마세요. #e스포츠</div>
+                            <div class="banner-item">💰 치지직 충전 시 **보너스 포인트 10%** 추가 지급 이벤트 진행 중!</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="live-streaming-section" style="margin-bottom: 40px;">
+                    <h2>현재 스트리밍중인 방송</h2>
+                    <div class="card-grid">
+                        <div class="live-card">라이브 방송 1</div>
+                        <div class="live-card">라이브 방송 2</div>
+                        <div class="live-card">라이브 방송 3</div>
+                        <div class="live-card">라이브 방송 4</div>
+                    </div>
+                </section>
+                
+                <section class="main-video-section" style="margin-bottom: 40px; position: relative;">
+                    <h2>T1 Worlds 2024 우승 하이라이트</h2>
+                    <video id="main-player" autoplay loop muted style="width: 100%; max-height: 500px; border-radius: 8px; object-fit: cover;">
+                        <source src="source/t1_highlight.mp4" type="video/mp4">
+                        브라우저가 video 태그를 지원하지 않습니다.
+                    </video>
+
+                    <button id="volume-toggle-btn" 
+                        style="position: absolute; bottom: 50px; left: 15px; 
+                                background-color: rgba(0, 0, 0, 0.6); color: white; 
+                                border: none; border-radius: 50%; padding: 10px; 
+                                cursor: pointer; font-size: 18px; z-index: 50;">
+                        <i class="fas fa-volume-mute"></i> 
+                    </button>
+                    
+                    <div class="video-info-overlay">
+                        <p class="info-title">T1 Worlds 2024 우승 하이라이트</p>
+                        <p class="info-details">최고의 경기, 최고의 팀</p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>라이브 스트리밍</h2>
+                    <div class="card-grid" id="live-list">
+                        <div class="live-card">로딩 중...</div>
+                        <div class="live-card">라이브 데이터</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>인기 VOD</h2>
+                    <div class="card-grid">
+                        <div class="vod-card">인기 VOD 1</div>
+                        <div class="vod-card">인기 VOD 2</div>
+                        <div class="vod-card">인기 VOD 3</div>
+                        <div class="vod-card">인기 VOD 4</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
