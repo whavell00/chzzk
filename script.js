@@ -175,24 +175,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 7. <<<< 롤링 배너 로직 추가 >>>>
     // -------------------------------------
     const banner = document.querySelector('.rolling-banner');
-    const bannerContainer = document.querySelector('.rolling-banner-container');
-    
-    if (banner && bannerContainer) {
-        const items = document.querySelectorAll('.rolling-banner .banner-item');
-        // 복제된 것을 포함하여 전체 아이템 개수를 가져와야 하지만, 
-        // HTML에서 복사본을 넣었으므로, 실제 보여줄 아이템 개수(4개)만 계산
-        const totalItems = items.length / 2; 
-        let currentIndex = 0;
+
+    if (banner) {
+        // 원본 아이템 개수 (총 15개)
+        const uniqueItemsCount = 15; 
+        // 한 번에 넘길 카드 1개의 너비 (100% / 8개 보이기) = 12.5%
+        const movePercentage = 100 / 8; 
+        let currentIndex = 0; // 현재 이동한 아이템의 인덱스 (0 to 14)
         
         // 3초마다 배너를 왼쪽으로 스크롤
         setInterval(() => {
             currentIndex++;
             
-            // 배너 너비의 100%만큼 왼쪽으로 이동 (min-width: 100% 덕분)
-            banner.style.transform = `translateX(-${currentIndex * 100}%)`;
+            // 1개 아이템의 너비만큼 왼쪽으로 이동 (12.5% * currentIndex)
+            banner.style.transform = `translateX(-${currentIndex * movePercentage}%)`;
 
-            // 마지막 실제 아이템(인덱스 3)을 지나 복제된 첫 아이템(인덱스 4)에 도착했을 때
-            if (currentIndex >= totalItems) {
+            // 마지막 실제 아이템(인덱스 14)을 지나 복제된 첫 아이템(인덱스 15)에 도착했을 때
+            if (currentIndex >= uniqueItemsCount) { 
                 // 부드럽게 이동한 후 (0.5초) 트랜지션을 즉시 제거하고 첫 위치로 복귀 (순간 이동)
                 setTimeout(() => {
                     banner.style.transition = 'none'; // 트랜지션 끄기
@@ -202,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // 다음 루프를 위해 트랜지션을 다시 켜기
                     setTimeout(() => {
                         banner.style.transition = 'transform 0.5s ease-in-out';
-                    }, 50); // 짧은 지연 시간 후 다시 트랜지션을 활성화
+                    }, 50); 
                 }, 500); // CSS transition 시간(0.5s)과 동일하게 설정
             }
         }, 3000); // 3초마다 실행
